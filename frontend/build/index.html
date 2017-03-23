@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html ng-app="alMundo">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Test Ángel Silva | almundo.com</title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<link rel="stylesheet" href="css/build.min.css">
+</head>
+<body ng-controller="mainController">
+	<header>
+		<div class="first-row">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<a href="/">
+							<img alt="Almundo.com vacaciones en serio" class="brand-logo" src="images/logo-almundo.svg">
+						</a>
+					</div>
+					<div class="col-xs-8">
+						<ul class="sup-menu pull-right list-inline hidden-md hidden-sm hidden-xs">
+							<li class="item">
+								<a href="#">
+									<span class="am-header login pointer"></span>
+									<span class="pointer">Ingresar</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<img class="" src="images/logo-clubalmundo.svg">
+									<span class="am-only-readers hidden">club almundo</span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<span class="pointer">Sucursales</span>
+								</a>
+							</li>
+							<li class="item contact">
+								<a href="#">
+									<span class="pointer">Llamanos</span>
+									<span class="am-header arrow-down"></span>
+								</a>
+							<li class="item help">
+								<a href="#">
+									<span class="pointer">Ayuda</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="sup-menu-mobile pull-right list-inline hidden-lg">
+							<li class="item">
+								<a href="#">
+									<span class="glyphicon am-header login pointer"></span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<span class="glyphicon am-header phone pointer"></span>
+								</a>
+							</li>
+							<li class="item">
+								<a href="#">
+									<span class="glyphicon glyphicon-menu-hamburger pointer"></span>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="second-row hidden-md hidden-sm hidden-xs">
+			<div class="container">
+				<ul class="main-menu list-inline">
+					<li><a href="/hoteles">Hoteles</a></li>
+					<li><a href="/vuelos">Vuelos</a></li>
+					<li><a href="/vuelo-hotel">Vuelo + Hotel</a></li>
+					<li><a href="/paquetes-turisticos">Paquetes</a></li>
+					<li><a href="/disney">Disney</a></li>
+					<li><a href="/promociones/escapadas">Escapadas</a></li>
+					<li><a href="/asistencia-al-viajero">Seguros</a></li>
+					<li><a href="/autos">Autos</a></li>
+					<li><a href="/promociones/cruceros">Cruceros</a></li>
+					<li><a href="/promociones/ofertas">OFERTAS</a></li>
+					<li><a>Más <span class="am-header arrow-down"></span></a></li>	
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<breadcrumb class="hidden-xs hidden-md hidden-sm">
+			<nav class="col-12 breadcrumbs">
+				<ul class="breadcrumbs_list list-inline">
+					<li class="">
+						<a href="#" target="_self">Home</a>
+						<span>&nbsp;/&nbsp;</span>
+					</li>
+					<li class="">
+						<a href="#" target="_self">Hoteles</a>
+						<span>&nbsp;/&nbsp;</span>
+					</li>
+					<li class="">madrid</li>
+				</ul>
+			</nav>
+		</breadcrumb>
+		<search class="hidden-xs hidden-md hidden-sm">
+			<h2>Hoteles disponibles para:</h2>
+			<ul class="list-inline">
+				<li>
+					<span class="icon-pointer"></span> <span> madrid</span>
+				</li>
+				<li>
+					<span class="icon-date-go"></span> <span> 27/03/2017</span>
+				</li>
+				<li>
+					<span class="icon-date-return"></span> <span> 28/03/2017</span>
+				</li>
+				<li>
+					<span class="icon-login"></span> <span> 2 huéspedes</span>
+				</li>
+				<li>
+					<a href="#"> Modificar búsqueda</a>
+				</li>
+			</ul>
+		</search>
+		<nav class="nav-mobile hidden-lg">
+			<div class="nav-head" data-toggle="collapse" data-target="#busqueda" aria-expanded="false">
+				<span>Modificar búsqueda</span>
+				<span class="icon arrow"></span>
+			</div>
+			<div class="nav-container collapse" id="busqueda" aria-expanded="false">
+				Formulario de Búsqueda
+			</div>
+			<hr class="nav-divider" />
+			<div class="nav-head">
+				<span>Ver hoteles en el mapa</span>
+			</div>
+
+			<hr class="nav-divider" />
+			<div class="nav-head" data-toggle="collapse" data-target="#filtar" aria-expanded="false">
+				<span>Filtrar</span>
+				<span class="icon arrow"></span>
+			</div>
+			<div class="nav-container collapse" id="filtar" aria-expanded="false">
+				<filters>
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#nombre" aria-expanded="false">
+							<span class="icon icon-len"></span>
+							<span>Nombre de hotel</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse" id="nombre" aria-expanded="false">
+							<div class="row">
+								<div class="col-xs-11 col-sm-10 col-xs-9">
+								  <input class="serch-nombre" placeholder="Ingrese el nombre del hotel ">
+								</div>
+								<div lass="col-md-1 col-sm-2 col-xs-3 ">
+								  <button type="submit" class="btn-nombre ">Aceptar</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#precio" aria-expanded="false">
+							<span class="icon icon-peso"></span>
+							<span>Precio por noche</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse" id="precio" aria-expanded="false">
+								<input id="slider2" class="col-xs-12" type="text" data-slider-min="780" data-slider-max="1763" data-slider-step="1" data-slider-tooltip="hide"/>
+							<div class="row">
+								<div class="col-xs-6 text-left"><strong>$ <span id="slider-min2">780</span></strong></div>
+								<div class="col-xs-6 text-right"><strong>$ <span id="slider-max2">1763</span></strong></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#estrellas" aria-expanded="false">
+							<span class="icon icon-star"></span>
+							<span>Estrellas</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse" id="estrellas" aria-expanded="false">
+							<div>
+								<label><input type="checkbox" name="" value=""> Todas las Estrellas</label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> </label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span></label>
+							</div>
+						</div>
+					</div>
+				</filter>
+			</div>
+			<hr class="nav-divider" />
+		</nav>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="order">
+					<label for="order" class="">Ordenar</label>
+					<select id="order" class="order-by">
+						<option value="recommended">Más relevantes</option>
+						<option value="price-ASC">Precio más bajo</option>
+						<option value="price-DESC">Precio más alto</option>
+						<option value="stars-ASC">Menos estrellas</option>
+						<option value="stars-DESC">Más estrellas</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<aside class="col-lg-3 hidden-xs hidden-md hidden-sm">
+				<filters>
+					<div class="hotels-map">
+						<a href="#" class=" text-center">
+							<img src="images/mapa.png" class="img-responsive" />
+							Ver hoteles en el mapa
+						</a>
+					</div>
+					<h2>Filtrar</h2>
+
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#nombre" aria-expanded="true">
+							<span class="icon icon-len"></span>
+							<span>Nombre de hotel</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse in" id="nombre" aria-expanded="true">
+							<div class="row">
+								<div class="col-md-8">
+								  <input class="serch-nombre" placeholder="Ingrese el nombre del hotel ">
+								</div>
+								<div lass="col-xs-4">
+								  <button type="submit" class="btn-nombre ">Aceptar</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#precio" aria-expanded="true">
+							<span class="icon icon-peso"></span>
+							<span>Precio por noche</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse in" id="precio" aria-expanded="true">
+								<input id="slider" class="col-xs-12" type="text" data-slider-min="780" data-slider-max="1763" data-slider-step="1" data-slider-tooltip="hide"/>
+							<div class="row">
+								<div class="col-xs-6 text-left"><strong>$ <span id="slider-min">780</span></strong></div>
+								<div class="col-xs-6 text-right"><strong>$ <span id="slider-max">1763</span></strong></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="filter">
+						<div class="filters-head" data-toggle="collapse" data-target="#estrellas" aria-expanded="true">
+							<span class="icon icon-star"></span>
+							<span>Estrellas</span>
+							<span class="icon arrow pull-right"></span>
+						</div>
+						<div class="filter-container collapse in" id="estrellas" aria-expanded="true">
+							<div>
+								<label><input type="checkbox" name="" value=""> Todas las Estrellas</label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span> <span class="icon icon-star"></span> </label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span> <span class="icon icon-star"></span></label>
+							</div>
+							<div>
+								<label><input type="checkbox" name="" value=""> <span class="icon icon-star"></span></label>
+							</div>
+						</div>
+					</div>
+				</filter>
+			</aside>
+			<section class="col-lg-9">
+				<loading ng-show="loading">
+					<div>
+						<div class="loader"></div>
+						<p>Actualizando resultados</p>
+					</div>
+				</loading>
+				<article ng-repeat="hotel in hotels">
+					<div class="row">
+						<div class="col-md-4">
+							<div id="carousel_{{ hotel.id }}" class="carousel slide" data-ride="carousel" data-interval="false">
+								<p class="recommended" ng-show="{{ hotel.recommended}}">¡Hotel recomendado!</p>
+								<div class="discount" ng-show="{{ hotel.rate.price.discount.percentage }}" >{{ hotel.rate.price.discount.percentage }}% OFF</div>
+							    <div class="carousel-inner" role="listbox">
+							      <div class="item" ng-class="{active:!$index}" ng-repeat="image in hotel.images" data-target="carousel_{{ hotel.id }}" data-slide-to="$index">
+							        <img src="images/blank.gif" class="img-responsive" width="100%" height="100%" style="background-image:url({{ image.url }});">
+							      </div>							      
+							    </div>
+							    <a class="left carousel-control" href="#carousel_{{ hotel.id }}" role="button" data-slide="prev">
+							      <span class="icon icon-arrow-left" aria-hidden="true"></span>
+							    </a>
+							    <a class="right carousel-control" href="#carousel_{{ hotel.id }}" role="button" data-slide="next">
+							      <span class="icon icon-arrow-right" aria-hidden="true"></span>
+							    </a>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<h1>{{ hotel.name }}</h1>
+							<p class="stars">
+								<span class="icon-star" ng-show="hotel.stars>=1"></span>
+								<span class="icon-star" ng-show="hotel.stars>=2"></span>
+								<span class="icon-star" ng-show="hotel.stars>=3"></span>
+								<span class="icon-star" ng-show="hotel.stars>=4"></span>
+								<span class="icon-star" ng-show="hotel.stars>=5"></span>
+
+							</p>
+							<p class="meal"><span class="icon-sleep"></span> {{ hotel.rate.meal_plan.description}}</p>
+							<ul class="amenities list-inline">
+								<li ng-repeat="amenitie in hotel.amenities">
+									<span class="amt-{{ amenitie.code }}" title="{{ amenitie.description }}" ng-tooltip></span>
+								</li>
+							</ul>
+						</div>
+						<div class="price col-md-3 text-center">
+							<p class="description">Precio por noche por habitación</p>
+							<p class="mount">
+								<span>{{ hotel.rate.price.currency.code }}</span>
+								{{ hotel.rate.price.show_amount_per_night_per_room }}
+							</p>
+							<p class="discount" ng-show="{{ hotel.rate.price.show_amount_per_night_per_room_without_discount > hotel.rate.price.show_amount_per_night_per_room }}">
+								Precio sin promo 
+								<strong>{{ hotel.rate.price.show_amount_per_night_per_room_without_discount }}</strong>
+							</p>
+							<p class="legal">Impuestos y tasas no incluidos</p>
+							<a href="#" class="btn">Ver hotel</a>
+							<p class="binding">{{ hotel.payment_methods[0].description }}</p>
+							<p class="methods">{{ hotel.payment_methods[1].description }}</p>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+	</div>
+	<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+	<script src="js/angular.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>	
+	<script src="js/bootstrap-slider.min.js" type="text/javascript"></script>
+	<script src="js/main.min.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
