@@ -12,7 +12,7 @@ app.configure(function () {
 });
 
 app.get('/', function(req, res) {
-  res.send("Hello world!");
+  res.send("API RESTFUL AlMUNDO");
 });
 
 routes = require('./routes/hotels')(app);
