@@ -13,7 +13,7 @@ http://www.arsd.com.ve/almundo
 
 Get the sources:
 ```bash
-git clone https://github.com/alexwakeman/node-angular-mongo-gulp.git
+$ git clone https://github.com/alexwakeman/node-angular-mongo-gulp.git
 ```
 
 ### NodeJS
