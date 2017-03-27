@@ -70,5 +70,4 @@ app.directive('ngTooltip', function(){
     };
 });
 
-
 app.controller('mainController', mainController);

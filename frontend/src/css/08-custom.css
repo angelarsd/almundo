@@ -597,6 +597,49 @@ loading > div p {
   padding: 5px 0px;
 }
 
+.pagination > li > span {
+  background: #f4f4f4;
+  border-color: #ccc;
+}
+
+.pagination > li > span:hover {
+  background: #f4f4f4;
+  border-color: #ccc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.pagination > li:nth-child(2) > span {
+  border-left: 1px dashed #ccc;
+}
+
+.pagination > li:last-child > span {
+  border-left: 1px dashed #ccc;
+  color: #157ab1;
+}
+
+.pagination > li.active > span {
+  background: #fff;
+  border: 4px solid #ccc;
+  color: #157ab1;
+  padding: 3px 9px;
+}
+
+.pagination > li.active > span:hover {
+  background: #fff;
+  color: #157ab1;
+  border: 4px solid #ccc;
+}
+
+.pagination > li.disabled > span {
+  color: #ccc;
+}
+
+.pagination > li.disabled > span:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   header .first-row {
     height: 56px;

@@ -303,7 +303,7 @@
 						<p>Actualizando resultados</p>
 					</div>
 				</loading>
-				<article ng-repeat="hotel in hotels">
+				<article ng-repeat="hotel in hotels" ng-show="hotels" class="ng-hide">
 					<div class="row">
 						<div class="col-md-4">
 							<div id="carousel_{{ hotel.id }}" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -335,7 +335,7 @@
 							<p class="meal"><span class="icon-sleep"></span> {{ hotel.rate.meal_plan.description}}</p>
 							<ul class="amenities list-inline">
 								<li ng-repeat="amenitie in hotel.amenities">
-									<span class="amt-{{ amenitie.code }}" title="{{ amenitie.description }}" ng-tooltip></span>
+									<span class="amt-{{ amenitie.code }}" data-toggle="tooltip" data-placement="bottom" data-original-title="{{ amenitie.description }}" ng-tooltip></span>
 								</li>
 							</ul>
 						</div>
@@ -356,11 +356,22 @@
 						</div>
 					</div>
 				</article>
+				<div class="text-center" ng-show="hotels" class="ng-hide">
+				<ul class="pagination">
+					<li ng-class="{'disabled': page == 1 }"><span href="#" ng-click="setPage(1)">Inicio</span></li>
+					<li ng-class="{'disabled': page == 1 }"><span href="#" ng-click="prevPage()"><<</span></li>
+					<li ng-repeat="i in getNumber(pages) track by $index" ng-click="setPage($index+1)" ng-class="{'active': page == ($index+1) }"><span href="#">{{ $index+1 }}</a></li>
+					<li ng-class="{'disabled': page == pages }"><span href="#" ng-click="nextPage()">>></span></li>
+					<li ng-class="{'disabled': page == pages }"><span href="#" ng-click="setPage(pages)">Fin</span></li>
+				</ul>
+            	</div>
 			</section>
+
 		</div>
 	</div>
 	<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
 	<script src="js/angular.min.js" type="text/javascript"></script>
+	<script src="js/angular-ui-router.min.js"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>	
 	<script src="js/bootstrap-slider.min.js" type="text/javascript"></script>
 	<script src="js/main.min.js" type="text/javascript"></script>
