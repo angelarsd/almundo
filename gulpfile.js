@@ -30,10 +30,9 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
   gulp.src('./frontend/src/js/*.js')
-    .pipe(minifyJs({ext:{
-            min:'.min.js'
-        },exclude: ['tasks']
-    })).pipe(gulp.dest('./frontend/build/js/'))
+    //.pipe(concatJS('build.js'))
+    .pipe(minifyJs({ext:{min:'.min.js'},exclude: ['tasks']}))
+    .pipe(gulp.dest('./frontend/build/js/'))
     .pipe(notify({message:"Se ha completado el task JS",onLast: true}));
 });
 
