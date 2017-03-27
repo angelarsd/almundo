@@ -178,7 +178,7 @@ filters{
 		font-weight: bold;
 		line-height: 1rem;
 		padding: 16px;
-		&hover {
+		&:hover {
 	    	color: $blue-2;
 	    	cursor: pointer;
 		}
@@ -433,6 +433,9 @@ nav{
 			}
 			.amenities{
 				font-size: 20px;
+				span:hover{
+					cursor: default;
+				}
 			}
 		}
 	}
@@ -557,4 +560,10 @@ loading {
   section article h1{
     margin-top: 10px;
   }
+}
+.ng-hide:not(.ng-hide-animate) {
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }

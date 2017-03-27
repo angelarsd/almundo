@@ -178,7 +178,7 @@ filters .filters-head {
   padding: 16px;
 }
 
-filters .filters-headhover {
+filters .filters-head:hover {
   color: #1a99df;
   cursor: pointer;
 }
@@ -467,6 +467,10 @@ section article .amenities {
   font-size: 20px;
 }
 
+section article .amenities span:hover {
+  cursor: default;
+}
+
 @-webkit-keyframes loading {
   0% {
     -webkit-transform: rotate(0deg);
@@ -618,4 +622,11 @@ loading > div p {
   section article h1 {
     margin-top: 10px;
   }
+}
+
+.ng-hide:not(.ng-hide-animate) {
+  display: block !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
