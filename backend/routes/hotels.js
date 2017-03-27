@@ -22,10 +22,12 @@ module.exports = function(app) {
   };
 
   paginateHotels = function(req, res) {
-  allowCrossDomain(req, res);
-    Hotels.paginate({}, { page: 1, limit: 20 }, function(err, hotels) {
+    allowCrossDomain(req, res);
+    var page = req.param('page') === undefined ? 1 : req.param('page');
+    //var stars = req.param('stars') === undefined ? 1 : req.param('stars');
+    Hotels.paginate({}, { page: page, limit: 20 }, function(err, hotels) {
       if(!err) {
-        console.log('GET /hotels')
+        console.log('GET /paginate page='+page);
         res.send(hotels);
       } else {
         console.log('ERROR: ' + err);
